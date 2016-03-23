@@ -2,7 +2,7 @@
 
 //Cumulative moving average
 int32_t cmavg(int32_t newDato, int32_t *lastAverage, int32_t *countAverage) {
-	#define AVG_WINDOW 3 //SAMPLES TO AVERAGE
+    #define AVG_WINDOW 3 //SAMPLES TO AVERAGE
 	
     int32_t average;
     average = *lastAverage + (newDato - *lastAverage) / (*countAverage + 1); //cuando countAverage=0, lastAverage se cancela(dejan de influir datos anteriores)        
@@ -14,7 +14,6 @@ int32_t cmavg(int32_t newDato, int32_t *lastAverage, int32_t *countAverage) {
 
 static int32_t lastAverage=0, countAverage=0;  
 
-
 main(){	
     	    
     //Example 3 number average        
@@ -24,22 +23,22 @@ main(){
 			
 	newDato = 1000;
 	average=cmavg( newDato,
-				 &lastAverage, 
-				 &countAverage );
+			&lastAverage, 
+			&countAverage );
 	
 	printf("\navg:%ld", average);
 	
 	newDato = 2000;
 	average=cmavg( newDato,
-				 &lastAverage, 
-				 &countAverage );				 
+			&lastAverage, 
+			&countAverage );				 
 	
 	printf("\navg:%ld", average);
 	
 	newDato = 3000;
 	average=cmavg( newDato,
-				 &lastAverage, 
-				 &countAverage );
+			&lastAverage, 
+			&countAverage );
 					 			
 	printf("\navg:%ld", average);
 				
