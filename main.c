@@ -27,21 +27,21 @@ int main(){
 			&lastAverage, 
 			&countAverage );
 	
-	printf("\navg:%ld", average);
+	printf("\navg:%ld", average);	//parcial
 	
 	
 	average=cmavg(  2000,
 			&lastAverage, 
 			&countAverage );				 
 	
-	printf("\navg:%ld", average);
+	printf("\navg:%ld", average);	//parcial
 	
 	
 	average=cmavg(  3000,
 			&lastAverage, 
 			&countAverage );
 					 			
-	printf("\navg:%ld", average);
+	printf("\navg:%ld", average); //done
 				
 	return 0;
 }
