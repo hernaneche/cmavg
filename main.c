@@ -12,34 +12,36 @@ int32_t cmavg(int32_t newDato, int32_t *lastAverage, int32_t *countAverage) {
     return average;
 }
 
-static int32_t lastAverage=0, countAverage=0;  
 
-main(){	
+
+int main(){	
     	    
-    //Example 3 number average        
-    //(1200+2000+3000)/3 = 2000    
+	//Example 3 number average        
+    	//(1200+2000+3000)/3 = 2000    
+    	
+	static int32_t lastAverage=0, countAverage=0;  
+    
 	int32_t average;	
-	int32_t newDato;
-			
-	newDato = 1000;
-	average=cmavg( newDato,
+	
+	average=cmavg(  1000,
 			&lastAverage, 
 			&countAverage );
 	
 	printf("\navg:%ld", average);
 	
-	newDato = 2000;
-	average=cmavg( newDato,
+	
+	average=cmavg(  2000,
 			&lastAverage, 
 			&countAverage );				 
 	
 	printf("\navg:%ld", average);
 	
-	newDato = 3000;
-	average=cmavg( newDato,
+	
+	average=cmavg(  3000,
 			&lastAverage, 
 			&countAverage );
 					 			
 	printf("\navg:%ld", average);
 				
+	return 0;
 }
