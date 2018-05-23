@@ -1,7 +1,7 @@
 #include<stdint.h>
 
 //Cumulative moving average
-int32_t cmavg(int32_t newDato, int32_t *lastAverage, int32_t *countAverage) {
+int32_t cmavg(const int32_t newDato, int32_t *lastAverage, int32_t *countAverage) {
 	#define AVG_WINDOW 3 //SAMPLES TO AVERAGE
 	
     int32_t average;
