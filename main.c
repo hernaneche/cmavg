@@ -20,25 +20,20 @@ static int32_t lastAverage=0, countAverage=0;
 int main(){	
     	    
 	//Example 3 number average        
-    	//(1200+2000+3000)/3 = 2000    
+    	//(1000+2000+3000)/3 = 2000    
     	
 	static int32_t lastAverage=0, countAverage=0;  
     
 	int32_t average;	
 	int32_t newDato;
 			
-	newDato = 1000;
-	average=cmavg( newDato,
-				 &lastAverage, 
-				 &countAverage );
 	
 	average=cmavg(  1000,
 			&lastAverage, 
 			&countAverage );
 	
 	printf("\navg:%ld", average);	//parcial
-	
-	printf("\navg:%ld", average);
+		
 	
 	average=cmavg(  2000,
 			&lastAverage, 
